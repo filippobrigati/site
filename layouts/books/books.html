@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/books.css" | relURL }}">
+    <title>{{ block "title" . }}
+        {{ .Site.Title }}
+        {{ end }}
+    </title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <div>
+                <h1 class="title">{{ .Title }}</h1>
+                <p class="text">{{ .Description }}</p>
+            </div>
+            <div>
+                <a href="/">
+                    <img src="/icons/home.svg" alt="Home" />
+                </a>
+            </div>
+        </div>
+        <div class="text">
+            <div class="list-container">
+                {{ range .Site.Data.books.books }}
+                <div>
+                    {{ if .favorite }}
+                    <span class="favorite"> - </span>
+                    {{ else }}
+                    <span> - </span>
+                    {{ end }}
+                    <span class="text">
+                        {{ .title }}
+                        <small>({{ .author }})</small>
+                    </span>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

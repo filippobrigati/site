@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div>
+    <div class="header">
+        <div>
+            <h1 class="title">{{ .Title }}</h1>
+        </div>
+        <div>
+            <a href="/">
+                <img src="/icons/home.svg" alt="Home" />
+            </a>
+        </div>
+    </div>
+    <div>
+        <small>{{ .WordCount }} Words</small></br>
+        <small>{{ .ReadingTime }} Minutes of reading</small>
+    </div>
+    <div class="spacing-2 text">
+        <article>
+            {{ .Content }}
+        </article>
+    </div>
+</div>
+<div class="spacing-2">
+    <small>{{ .Date.Format "Mon Jan 2, 2006" }}</small>
+    <div>
+        {{ with .PrevInSection }}
+        <a class="previous" href="{{ .Permalink }}"> {{.Title}}</a>
+        {{ end }}
+        {{ with .NextInSection }}
+        <a class="next" href="{{ .Permalink }}"> {{.Title}}</a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

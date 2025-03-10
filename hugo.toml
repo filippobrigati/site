@@ -1,0 +1,9 @@
+baseURL = 'https://filippobrigati.com/'
+languageCode = 'en-us'
+title = 'Filippo Brigati'
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1

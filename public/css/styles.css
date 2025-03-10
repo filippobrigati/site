@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+::selection {
+  background: oklch(0.951 0.026 236.824);
+  color: black;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: oklch(0.951 0.026 236.824);
+  color: black;
+  text-shadow: none;
+}
