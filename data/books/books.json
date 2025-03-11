@@ -1,17 +1,37 @@
 [
   {
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
+    "title": "Succede sempre qualcosa di meraviglioso",
+    "author": "Gianluca Gotto",
     "favorite": true
   },
   {
-    "title": "To Kill a Mockingbird",
-    "author": "Harper Lee",
+    "title": "Resto qui",
+    "author": "Marco Balzano",
+    "favorite": true
+  },
+  {
+    "title": "La scatola nera",
+    "author": "Michael Connelly",
     "favorite": false
   },
   {
-    "title": "1984",
-    "author": "George Orwell",
+    "title": "Le otto montagne",
+    "author": "Paolo Cognetti",
+    "favorite": true
+  },
+  {
+    "title": "Assassinio sull'Orient Express",
+    "author": "Agatha Christie",
+    "favorite": false
+  },
+  {
+    "title": "Lo spettro dello squartatore",
+    "author": "David Stuart Davies",
+    "favorite": false
+  },
+  {
+    "title": "La grande truffa",
+    "author": "Josh Grisham",
     "favorite": false
   }
 ]
