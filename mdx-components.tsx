@@ -2,6 +2,10 @@ import React, { ComponentPropsWithoutRef } from 'react';
 import Link from 'next/link';
 import { highlight } from 'sugar-high';
 
+import { Geist_Mono } from 'next/font/google';
+
+const geist = Geist_Mono({ subsets: ['latin']});
+
 type HeadingProps = ComponentPropsWithoutRef<'h1'>;
 type ParagraphProps = ComponentPropsWithoutRef<'p'>;
 type ListProps = ComponentPropsWithoutRef<'ul'>;
@@ -79,7 +83,7 @@ const components = {
   },
   code: ({ children, ...props }: ComponentPropsWithoutRef<'code'>) => {
     const codeHTML = highlight(children as string);
-    return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
+    return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} className={`${geist.className}`} />;
   },
   Table: ({ data }: { data: { headers: string[]; rows: string[][] } }) => (
     <table>

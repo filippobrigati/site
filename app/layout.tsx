@@ -1,18 +1,17 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
 
-const inter = Inter({ subsets: ['latin'] });
+const myFont = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://next-mdx-blog.vercel.app'),
+  metadataBase: new URL('https://filippobrigati.com'),
   alternates: {
     canonical: '/'
   },
   title: {
-    default: 'John Smith',
-    template: '%s | John Smith'
+    default: 'Filippo Brigati',
+    template: '%s | FB'
   },
   description: 'My portfolio, blog, and personal website.'
 };
@@ -23,14 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.className}`}>
+    <html lang="en" className={`${myFont.className}`}>
       <body className="antialiased tracking-tight">
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-zinc-950 bg-white text-gray-900 dark:text-zinc-200">
           <main className="max-w-[60ch] mx-auto w-full space-y-6">
             {children}
           </main>
           <Footer />
-          <Analytics />
         </div>
       </body>
     </html>
@@ -39,10 +37,8 @@ export default function RootLayout({
 
 function Footer() {
   const links = [
-    { name: '@johnsmith', url: 'https://x.com/johnsmith' },
-    { name: 'youtube', url: 'https://www.youtube.com/@johnsmith' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/johnsmith' },
-    { name: 'github', url: 'https://github.com/johnsmith' }
+    { name: 'github', url: 'https://github.com/filippobrigati' },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/filippo-brigati/' }
   ];
 
   return (
